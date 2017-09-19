@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4823391F719DB700E83503 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4823381F719DB700E83503 /* SettingsController.swift */; };
+		AF48233B1F71BFCE00E83503 /* MonitorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48233A1F71BFCE00E83503 /* MonitorController.swift */; };
 		AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4911F51F7063B0003701AC /* AppDelegate.swift */; };
 		AF4911F81F7063B0003701AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4911F71F7063B0003701AC /* ViewController.swift */; };
 		AF4911FB1F7063B0003701AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4911F91F7063B0003701AC /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF4823381F719DB700E83503 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		AF48233A1F71BFCE00E83503 /* MonitorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorController.swift; sourceTree = "<group>"; };
 		AF4911F21F7063B0003701AC /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4911F51F7063B0003701AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4911F71F7063B0003701AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,7 @@
 		AF4911FC1F7063B0003701AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF4911FF1F7063B0003701AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF4912011F7063B0003701AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF4912081F706A84003701AC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +45,7 @@
 			children = (
 				AF4911F41F7063B0003701AC /* Hodor */,
 				AF4911F31F7063B0003701AC /* Products */,
+				AF4912071F706A84003701AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +66,18 @@
 				AF4911FC1F7063B0003701AC /* Assets.xcassets */,
 				AF4911FE1F7063B0003701AC /* LaunchScreen.storyboard */,
 				AF4912011F7063B0003701AC /* Info.plist */,
+				AF4823381F719DB700E83503 /* SettingsController.swift */,
+				AF48233A1F71BFCE00E83503 /* MonitorController.swift */,
 			);
 			path = Hodor;
+			sourceTree = "<group>";
+		};
+		AF4912071F706A84003701AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF4912081F706A84003701AC /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +153,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4823391F719DB700E83503 /* SettingsController.swift in Sources */,
 				AF4911F81F7063B0003701AC /* ViewController.swift in Sources */,
+				AF48233B1F71BFCE00E83503 /* MonitorController.swift in Sources */,
 				AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
