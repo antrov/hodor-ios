@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF4023B51F743E0300AF1756 /* UsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4023B41F743E0300AF1756 /* UsersController.swift */; };
 		AF4823391F719DB700E83503 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4823381F719DB700E83503 /* SettingsController.swift */; };
-		AF48233B1F71BFCE00E83503 /* MonitorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48233A1F71BFCE00E83503 /* MonitorController.swift */; };
+		AF48233B1F71BFCE00E83503 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48233A1F71BFCE00E83503 /* HistoryController.swift */; };
 		AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4911F51F7063B0003701AC /* AppDelegate.swift */; };
 		AF4911F81F7063B0003701AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4911F71F7063B0003701AC /* ViewController.swift */; };
 		AF4911FB1F7063B0003701AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4911F91F7063B0003701AC /* Main.storyboard */; };
 		AF4911FD1F7063B0003701AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4911FC1F7063B0003701AC /* Assets.xcassets */; };
 		AF4912001F7063B0003701AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4911FE1F7063B0003701AC /* LaunchScreen.storyboard */; };
+		AF5A608D1F73104800F927FD /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A608C1F73104800F927FD /* HistoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AF4023B41F743E0300AF1756 /* UsersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersController.swift; sourceTree = "<group>"; };
 		AF4823381F719DB700E83503 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		AF48233A1F71BFCE00E83503 /* MonitorController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonitorController.swift; sourceTree = "<group>"; };
+		AF48233A1F71BFCE00E83503 /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
 		AF4911F21F7063B0003701AC /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF4911F51F7063B0003701AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF4911F71F7063B0003701AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 		AF4911FF1F7063B0003701AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF4912011F7063B0003701AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF4912081F706A84003701AC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		AF5A608C1F73104800F927FD /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +71,9 @@
 				AF4911FE1F7063B0003701AC /* LaunchScreen.storyboard */,
 				AF4912011F7063B0003701AC /* Info.plist */,
 				AF4823381F719DB700E83503 /* SettingsController.swift */,
-				AF48233A1F71BFCE00E83503 /* MonitorController.swift */,
+				AF48233A1F71BFCE00E83503 /* HistoryController.swift */,
+				AF5A608C1F73104800F927FD /* HistoryCell.swift */,
+				AF4023B41F743E0300AF1756 /* UsersController.swift */,
 			);
 			path = Hodor;
 			sourceTree = "<group>";
@@ -155,8 +161,10 @@
 			files = (
 				AF4823391F719DB700E83503 /* SettingsController.swift in Sources */,
 				AF4911F81F7063B0003701AC /* ViewController.swift in Sources */,
-				AF48233B1F71BFCE00E83503 /* MonitorController.swift in Sources */,
+				AF4023B51F743E0300AF1756 /* UsersController.swift in Sources */,
+				AF48233B1F71BFCE00E83503 /* HistoryController.swift in Sources */,
 				AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */,
+				AF5A608D1F73104800F927FD /* HistoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
