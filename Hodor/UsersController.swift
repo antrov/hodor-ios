@@ -7,15 +7,24 @@
 //
 
 import UIKit
+import PromiseKit
 
 class UsersController: UICollectionViewController {
     
     @IBOutlet var modalNavigationItem: UINavigationItem!
     
+    let p = Promise<Void>.pending()
+    
+    override func viewDidLoad() {
+        p.promise.then {
+            print("dziala")
+        }
+    }
     
     // MARK: Actions
     
     @IBAction func addBtnAction(_ sender: Any) {
+        p.fulfill()
     }
     
     @IBAction func cancelBtnAction(_ sender: Any) {

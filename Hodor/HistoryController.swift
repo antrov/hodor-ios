@@ -17,8 +17,8 @@ struct HistoryItem {
         case uploading, processing, completed
     }
     
-    init(date: Date) {
-        self.date = date
+    init() {
+        self.date = Date(timeIntervalSinceNow: Double(arc4random() % 1000))
         self.user = ["Hubert", "Lena"][Int(arc4random() % 2)]
         self.status = .completed
     }
@@ -37,16 +37,15 @@ class HistoryController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        history.append(HistoryItem(date: Date()))
-        
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
+        history.append(HistoryItem())
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
