@@ -11,6 +11,9 @@
 		AF07DBA11F75872600368174 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07DB9F1F75871E00368174 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF2D46011F75B2B0008F4E90 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */; };
 		AF2D46021F75B2B0008F4E90 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AF2D46041F75B42A008F4E90 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D46031F75B42A008F4E90 /* UserCell.swift */; };
+		AF2D46071F75BA32008F4E90 /* avatar_lena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF2D46051F75B987008F4E90 /* avatar_lena.jpg */; };
+		AF2D46081F75BA35008F4E90 /* avatar_hubert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF2D46061F75B988008F4E90 /* avatar_hubert.jpg */; };
 		AF4023B51F743E0300AF1756 /* UsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4023B41F743E0300AF1756 /* UsersController.swift */; };
 		AF4823391F719DB700E83503 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4823381F719DB700E83503 /* SettingsController.swift */; };
 		AF48233B1F71BFCE00E83503 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48233A1F71BFCE00E83503 /* HistoryController.swift */; };
@@ -40,6 +43,9 @@
 /* Begin PBXFileReference section */
 		AF07DB9F1F75871E00368174 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
 		AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
+		AF2D46031F75B42A008F4E90 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		AF2D46051F75B987008F4E90 /* avatar_lena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar_lena.jpg; sourceTree = "<group>"; };
+		AF2D46061F75B988008F4E90 /* avatar_hubert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar_hubert.jpg; sourceTree = "<group>"; };
 		AF4023B41F743E0300AF1756 /* UsersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersController.swift; sourceTree = "<group>"; };
 		AF4823381F719DB700E83503 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		AF48233A1F71BFCE00E83503 /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
@@ -97,6 +103,9 @@
 				AF48233A1F71BFCE00E83503 /* HistoryController.swift */,
 				AF5A608C1F73104800F927FD /* HistoryCell.swift */,
 				AF4023B41F743E0300AF1756 /* UsersController.swift */,
+				AF2D46051F75B987008F4E90 /* avatar_lena.jpg */,
+				AF2D46061F75B988008F4E90 /* avatar_hubert.jpg */,
+				AF2D46031F75B42A008F4E90 /* UserCell.swift */,
 			);
 			path = Hodor;
 			sourceTree = "<group>";
@@ -172,8 +181,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2D46071F75BA32008F4E90 /* avatar_lena.jpg in Resources */,
 				AF4912001F7063B0003701AC /* LaunchScreen.storyboard in Resources */,
 				AF4911FD1F7063B0003701AC /* Assets.xcassets in Resources */,
+				AF2D46081F75BA35008F4E90 /* avatar_hubert.jpg in Resources */,
 				AF4911FB1F7063B0003701AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,6 +202,7 @@
 				AF48233B1F71BFCE00E83503 /* HistoryController.swift in Sources */,
 				AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */,
 				AF5A608D1F73104800F927FD /* HistoryCell.swift in Sources */,
+				AF2D46041F75B42A008F4E90 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
