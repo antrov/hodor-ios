@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9EE3FAEA82AB6ED315039EE0 /* libPods-Hodor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DBE987B2568B9F942A561753 /* libPods-Hodor.a */; };
 		AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA21F7664F30018E4C8 /* AppDelegate.m */; };
 		AFA24CA61F7664F30018E4C8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA51F7664F30018E4C8 /* FirstViewController.m */; };
 		AFA24CA91F7664F30018E4C8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA81F7664F30018E4C8 /* SecondViewController.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		863FE178CD0AF0DAAB329F37 /* Pods-Hodor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.release.xcconfig"; sourceTree = "<group>"; };
 		AFA24C9E1F7664F30018E4C8 /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA24CA11F7664F30018E4C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFA24CA21F7664F30018E4C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		AFA24CB01F7664F30018E4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AFA24CB21F7664F30018E4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFA24CB31F7664F30018E4C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DBE987B2568B9F942A561753 /* libPods-Hodor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hodor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3B0123C6A311F378AAFA276 /* Pods-Hodor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE3FAEA82AB6ED315039EE0 /* libPods-Hodor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20540EE3577FF28F7ADEB2B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBE987B2568B9F942A561753 /* libPods-Hodor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2CD171B27B4C6D5432634101 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3B0123C6A311F378AAFA276 /* Pods-Hodor.debug.xcconfig */,
+				863FE178CD0AF0DAAB329F37 /* Pods-Hodor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AFA24C951F7664F30018E4C8 = {
 			isa = PBXGroup;
 			children = (
 				AFA24CA01F7664F30018E4C8 /* Hodor */,
 				AFA24C9F1F7664F30018E4C8 /* Products */,
+				2CD171B27B4C6D5432634101 /* Pods */,
+				20540EE3577FF28F7ADEB2B0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AFA24CB71F7664F30018E4C8 /* Build configuration list for PBXNativeTarget "Hodor" */;
 			buildPhases = (
+				D50BBD2DA962F37DC8730687 /* [CP] Check Pods Manifest.lock */,
 				AFA24C9A1F7664F30018E4C8 /* Sources */,
 				AFA24C9B1F7664F30018E4C8 /* Frameworks */,
 				AFA24C9C1F7664F30018E4C8 /* Resources */,
+				AD00C3BC6763B97B5E9EB137 /* [CP] Embed Pods Frameworks */,
+				F1FE62D22B796B9AD7183257 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -141,6 +168,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AD00C3BC6763B97B5E9EB137 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hodor/Pods-Hodor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D50BBD2DA962F37DC8730687 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hodor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1FE62D22B796B9AD7183257 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hodor/Pods-Hodor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AFA24C9A1F7664F30018E4C8 /* Sources */ = {
@@ -282,6 +360,7 @@
 		};
 		AFA24CB81F7664F30018E4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3B0123C6A311F378AAFA276 /* Pods-Hodor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,13 +370,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Hodor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.0;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		AFA24CB91F7664F30018E4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 863FE178CD0AF0DAAB329F37 /* Pods-Hodor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,7 +387,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Hodor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos11.0;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

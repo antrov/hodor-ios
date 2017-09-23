@@ -1,0 +1,83 @@
+PODS:
+  - AFNetworking (3.1.0):
+    - AFNetworking/NSURLSession (= 3.1.0)
+    - AFNetworking/Reachability (= 3.1.0)
+    - AFNetworking/Security (= 3.1.0)
+    - AFNetworking/Serialization (= 3.1.0)
+    - AFNetworking/UIKit (= 3.1.0)
+  - AFNetworking/NSURLSession (3.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.1.0)
+  - AFNetworking/Security (3.1.0)
+  - AFNetworking/Serialization (3.1.0)
+  - AFNetworking/UIKit (3.1.0):
+    - AFNetworking/NSURLSession
+  - JSONModel (1.7.0)
+  - OMGHTTPURLRQ (2.1.3):
+    - OMGHTTPURLRQ/RQ (= 2.1.3)
+  - OMGHTTPURLRQ/FormURLEncode (2.1.3)
+  - OMGHTTPURLRQ/RQ (2.1.3):
+    - OMGHTTPURLRQ/FormURLEncode
+    - OMGHTTPURLRQ/UserAgent
+  - OMGHTTPURLRQ/UserAgent (2.1.3)
+  - PromiseKit (1.7.3):
+    - PromiseKit/CALayer (= 1.7.3)
+    - PromiseKit/NSNotificationCenter (= 1.7.3)
+    - PromiseKit/NSURLConnection (= 1.7.3)
+    - PromiseKit/Pause (= 1.7.3)
+    - PromiseKit/UIActionSheet (= 1.7.3)
+    - PromiseKit/UIAlertView (= 1.7.3)
+    - PromiseKit/UIView (= 1.7.3)
+    - PromiseKit/UIViewController (= 1.7.3)
+    - PromiseKit/Until (= 1.7.3)
+    - PromiseKit/When (= 1.7.3)
+  - PromiseKit/CALayer (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/NSNotificationCenter (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/NSURLConnection (1.7.3):
+    - OMGHTTPURLRQ (~> 2.1)
+    - PromiseKit/Promise
+  - PromiseKit/Pause (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/Promise (1.7.3)
+  - PromiseKit/UIActionSheet (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/UIAlertView (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/UIView (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/UIViewController (1.7.3):
+    - PromiseKit/Promise
+  - PromiseKit/Until (1.7.3):
+    - PromiseKit/Promise
+    - PromiseKit/When
+  - PromiseKit/When (1.7.3):
+    - PromiseKit/Promise
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - JSONModel
+  - PromiseKit (from `https://github.com/mxcl/PromiseKit.git`, tag `1.7.3`)
+
+EXTERNAL SOURCES:
+  PromiseKit:
+    :git: https://github.com/mxcl/PromiseKit.git
+    :tag: 1.7.3
+
+CHECKOUT OPTIONS:
+  PromiseKit:
+    :git: https://github.com/mxcl/PromiseKit.git
+    :tag: 1.7.3
+
+SPEC CHECKSUMS:
+  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  OMGHTTPURLRQ: c4268dea4295b585d711055dbcd87bfa82badd5f
+  PromiseKit: 06937fab6289567b0b2af38f521a854564062774
+
+PODFILE CHECKSUM: 1e9cab134e0e0216e35aac591da84463a053efd9
+
+COCOAPODS: 1.3.1
