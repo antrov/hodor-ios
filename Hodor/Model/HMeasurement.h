@@ -9,7 +9,7 @@
 #import <JSONModel/JSONModel.h>
 #import "HUser.h"
 
-@interface HHistoryItem : JSONModel
+@interface HMeasurement: JSONModel
 @property (nonatomic) HUser *user;
 @property (nonatomic) NSString *state;
 @property (nonatomic) NSDate *timestamp;

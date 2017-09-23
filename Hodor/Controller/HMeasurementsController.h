@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HMonitorController : UITableViewController
+@interface HMeasurementsController : UITableViewController
 
 @end

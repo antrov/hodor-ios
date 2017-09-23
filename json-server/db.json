@@ -8,5 +8,12 @@
             "id": "ghi-jkl-2",
             "name": "Hubert"
         }
+    ],
+    "measurements": [
+        {
+            "id": "1",
+            "timestamp": "2008-09-03T20:56:35.450686Z",
+            "userId": "abc-def-1"
+        }
     ]
 }

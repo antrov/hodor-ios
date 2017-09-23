@@ -35,7 +35,7 @@ static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
     return self;
 }
 
-- (PMKPromise *)getFromEndpoint:(NSString*)endpoint expectedResultClass:(Class)resultClass {
+- (PMKPromise *)getResourceArray:(NSString*)endpoint expectedResultClass:(Class)resultClass {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
         [self.manager GET:endpoint parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
             NSError *jsonError;
@@ -52,8 +52,15 @@ static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
     }];
 }
 
+#pragma mark Public methods
+
 - (PMKPromise *)getUsers {
-    return [self getFromEndpoint:@"/users" expectedResultClass:HUser.class];
+    return [self getResourceArray:@"/users" expectedResultClass:HUser.class];
 }
+
+- (PMKPromise *)getMeasurements {
+    return [self getResourceArray:@"/measurements" expectedResultClass:HMeasurement.class];
+}
+
 
 @end

@@ -6,13 +6,13 @@
 //  Copyright © 2017 Antrov. All rights reserved.
 //
 
-#import "HMonitorController.h"
+#import "HMeasurementsController.h"
 
-@interface HMonitorController ()
+@interface HMeasurementsController ()
 
 @end
 
-@implementation HMonitorController
+@implementation HMeasurementsController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,7 +40,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return [tableView dequeueReusableCellWithIdentifier:@"MonitorItemCell" forIndexPath:indexPath];
+    return [tableView dequeueReusableCellWithIdentifier:@"MeasurementCell" forIndexPath:indexPath];
 }
 
 /*

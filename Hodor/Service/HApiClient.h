@@ -7,7 +7,7 @@
 //
 
 #import "HUser.h"
-#import "HHistoryItem.h"
+#import "HMeasurement.h"
 #import <Foundation/Foundation.h>
 #import <PromiseKit/PromiseKit.h>
 

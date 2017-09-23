@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HMonitorItemCell : UITableViewCell
+@interface HMeasurementCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImgView;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;

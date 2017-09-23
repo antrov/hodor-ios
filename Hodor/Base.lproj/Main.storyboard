@@ -13,13 +13,13 @@
         <!--Monitor-->
         <scene sceneID="zi9-Ih-cIp">
             <objects>
-                <tableViewController id="0Ao-5Z-FLI" customClass="HMonitorController" sceneMemberID="viewController">
+                <tableViewController id="0Ao-5Z-FLI" customClass="HMeasurementsController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="T86-WE-ezz">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MonitorItemCell" id="VVb-VY-HuZ" customClass="HMonitorItemCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MeasurementCell" id="VVb-VY-HuZ" customClass="HMeasurementCell">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VVb-VY-HuZ" id="hZh-mH-3Nv">
