@@ -12,6 +12,8 @@
 		AF73D8D11F76C70700903AF6 /* HUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D01F76C70700903AF6 /* HUserCell.m */; };
 		AF73D8D41F76C91100903AF6 /* HMonitorController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D31F76C91100903AF6 /* HMonitorController.m */; };
 		AF73D8D71F76CBFA00903AF6 /* HUsersController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D61F76CBFA00903AF6 /* HUsersController.m */; };
+		AF73D8DA1F76D0FA00903AF6 /* HUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D91F76D0FA00903AF6 /* HUser.m */; };
+		AF73D8DD1F76D18600903AF6 /* HHistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8DC1F76D18600903AF6 /* HHistoryItem.m */; };
 		AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA21F7664F30018E4C8 /* AppDelegate.m */; };
 		AFA24CAC1F7664F30018E4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAA1F7664F30018E4C8 /* Main.storyboard */; };
 		AFA24CAE1F7664F30018E4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAD1F7664F30018E4C8 /* Assets.xcassets */; };
@@ -29,6 +31,10 @@
 		AF73D8D31F76C91100903AF6 /* HMonitorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMonitorController.m; sourceTree = "<group>"; };
 		AF73D8D51F76CBFA00903AF6 /* HUsersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUsersController.h; sourceTree = "<group>"; };
 		AF73D8D61F76CBFA00903AF6 /* HUsersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUsersController.m; sourceTree = "<group>"; };
+		AF73D8D81F76D0FA00903AF6 /* HUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUser.h; sourceTree = "<group>"; };
+		AF73D8D91F76D0FA00903AF6 /* HUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUser.m; sourceTree = "<group>"; };
+		AF73D8DB1F76D18600903AF6 /* HHistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHistoryItem.h; sourceTree = "<group>"; };
+		AF73D8DC1F76D18600903AF6 /* HHistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHistoryItem.m; sourceTree = "<group>"; };
 		AFA24C9E1F7664F30018E4C8 /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA24CA11F7664F30018E4C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFA24CA21F7664F30018E4C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -73,6 +79,10 @@
 		AF00EFF31F76BD4C00A999FA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF73D8D81F76D0FA00903AF6 /* HUser.h */,
+				AF73D8D91F76D0FA00903AF6 /* HUser.m */,
+				AF73D8DB1F76D18600903AF6 /* HHistoryItem.h */,
+				AF73D8DC1F76D18600903AF6 /* HHistoryItem.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -285,6 +295,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF73D8D11F76C70700903AF6 /* HUserCell.m in Sources */,
+				AF73D8DA1F76D0FA00903AF6 /* HUser.m in Sources */,
+				AF73D8DD1F76D18600903AF6 /* HHistoryItem.m in Sources */,
 				AF73D8D71F76CBFA00903AF6 /* HUsersController.m in Sources */,
 				AF73D8CE1F76C69B00903AF6 /* HMonitorItemCell.m in Sources */,
 				AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */,
