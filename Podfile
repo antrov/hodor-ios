@@ -6,7 +6,8 @@ target 'Hodor' do
   # use_frameworks!
 
   # Pods for Hodor
-  pod 'PromiseKit', :git => 'https://github.com/mxcl/PromiseKit.git', :tag => '1.7.3'
+  #pod 'PromiseKit', :git => 'https://github.com/mxcl/PromiseKit.git', :tag => '1.7.3'
+  pod 'PromiseKit', '< 2'
   pod 'AFNetworking', '~> 3.0'
   pod 'JSONModel'
   

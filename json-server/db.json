@@ -1,0 +1,12 @@
+{ 
+    "users": [
+        {
+            "id": "abc-def-1",
+            "name": "Lena"
+        },
+         {
+            "id": "ghi-jkl-2",
+            "name": "Hubert"
+        }
+    ]
+}

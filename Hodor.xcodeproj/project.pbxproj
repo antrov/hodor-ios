@@ -14,12 +14,26 @@
 		AF73D8D71F76CBFA00903AF6 /* HUsersController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D61F76CBFA00903AF6 /* HUsersController.m */; };
 		AF73D8DA1F76D0FA00903AF6 /* HUser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D91F76D0FA00903AF6 /* HUser.m */; };
 		AF73D8DD1F76D18600903AF6 /* HHistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8DC1F76D18600903AF6 /* HHistoryItem.m */; };
+		AF73D8E01F76D23E00903AF6 /* HApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8DF1F76D23E00903AF6 /* HApiClient.m */; };
 		AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA21F7664F30018E4C8 /* AppDelegate.m */; };
 		AFA24CAC1F7664F30018E4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAA1F7664F30018E4C8 /* Main.storyboard */; };
 		AFA24CAE1F7664F30018E4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAD1F7664F30018E4C8 /* Assets.xcassets */; };
 		AFA24CB11F7664F30018E4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAF1F7664F30018E4C8 /* LaunchScreen.storyboard */; };
 		AFA24CB41F7664F30018E4C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CB31F7664F30018E4C8 /* main.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF05210F1F76E4330081264D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		863FE178CD0AF0DAAB329F37 /* Pods-Hodor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.release.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +49,8 @@
 		AF73D8D91F76D0FA00903AF6 /* HUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUser.m; sourceTree = "<group>"; };
 		AF73D8DB1F76D18600903AF6 /* HHistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HHistoryItem.h; sourceTree = "<group>"; };
 		AF73D8DC1F76D18600903AF6 /* HHistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HHistoryItem.m; sourceTree = "<group>"; };
+		AF73D8DE1F76D23E00903AF6 /* HApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HApiClient.h; sourceTree = "<group>"; };
+		AF73D8DF1F76D23E00903AF6 /* HApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HApiClient.m; sourceTree = "<group>"; };
 		AFA24C9E1F7664F30018E4C8 /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFA24CA11F7664F30018E4C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFA24CA21F7664F30018E4C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +128,8 @@
 		AF00EFF61F76BD6500A999FA /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				AF73D8DE1F76D23E00903AF6 /* HApiClient.h */,
+				AF73D8DF1F76D23E00903AF6 /* HApiClient.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -181,6 +199,7 @@
 				AFA24C9C1F7664F30018E4C8 /* Resources */,
 				AD00C3BC6763B97B5E9EB137 /* [CP] Embed Pods Frameworks */,
 				F1FE62D22B796B9AD7183257 /* [CP] Copy Pods Resources */,
+				AF05210F1F76E4330081264D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -299,6 +318,7 @@
 				AF73D8DD1F76D18600903AF6 /* HHistoryItem.m in Sources */,
 				AF73D8D71F76CBFA00903AF6 /* HUsersController.m in Sources */,
 				AF73D8CE1F76C69B00903AF6 /* HMonitorItemCell.m in Sources */,
+				AF73D8E01F76D23E00903AF6 /* HApiClient.m in Sources */,
 				AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */,
 				AFA24CB41F7664F30018E4C8 /* main.m in Sources */,
 				AF73D8D41F76C91100903AF6 /* HMonitorController.m in Sources */,
@@ -438,6 +458,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JCQ7MZJ24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PromiseKit/build/Debug",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Hodor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -455,6 +480,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JCQ7MZJ24;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PromiseKit/build/Debug",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Hodor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
