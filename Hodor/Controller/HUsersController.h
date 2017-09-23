@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  HUsersController.h
 //  Hodor
 //
 //  Created by Antrov on 23.09.2017.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
-
+@interface HUsersController : UICollectionViewController
 
 @end
-
