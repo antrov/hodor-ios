@@ -7,112 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7908719140501068C5F29EB0 /* libPods-Hodor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FC72ECB6E32422B7AA7C63 /* libPods-Hodor.a */; };
-		AFF75F851F765D0F00FBBF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F841F765D0F00FBBF99 /* AppDelegate.m */; };
-		AFF75F881F765D0F00FBBF99 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F871F765D0F00FBBF99 /* FirstViewController.m */; };
-		AFF75F8B1F765D0F00FBBF99 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F8A1F765D0F00FBBF99 /* SecondViewController.m */; };
-		AFF75F8E1F765D0F00FBBF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF75F8C1F765D0F00FBBF99 /* Main.storyboard */; };
-		AFF75F901F765D0F00FBBF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF75F8F1F765D0F00FBBF99 /* Assets.xcassets */; };
-		AFF75F931F765D0F00FBBF99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF75F911F765D0F00FBBF99 /* LaunchScreen.storyboard */; };
-		AFF75F961F765D0F00FBBF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F951F765D0F00FBBF99 /* main.m */; };
+		AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA21F7664F30018E4C8 /* AppDelegate.m */; };
+		AFA24CA61F7664F30018E4C8 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA51F7664F30018E4C8 /* FirstViewController.m */; };
+		AFA24CA91F7664F30018E4C8 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CA81F7664F30018E4C8 /* SecondViewController.m */; };
+		AFA24CAC1F7664F30018E4C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAA1F7664F30018E4C8 /* Main.storyboard */; };
+		AFA24CAE1F7664F30018E4C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAD1F7664F30018E4C8 /* Assets.xcassets */; };
+		AFA24CB11F7664F30018E4C8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFA24CAF1F7664F30018E4C8 /* LaunchScreen.storyboard */; };
+		AFA24CB41F7664F30018E4C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFA24CB31F7664F30018E4C8 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7B7FE962FEA7A8EB74E59B78 /* Pods-Hodor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.release.xcconfig"; sourceTree = "<group>"; };
-		AFF75F801F765D0F00FBBF99 /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFF75F831F765D0F00FBBF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AFF75F841F765D0F00FBBF99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AFF75F861F765D0F00FBBF99 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		AFF75F871F765D0F00FBBF99 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		AFF75F891F765D0F00FBBF99 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		AFF75F8A1F765D0F00FBBF99 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		AFF75F8D1F765D0F00FBBF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AFF75F8F1F765D0F00FBBF99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AFF75F921F765D0F00FBBF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AFF75F941F765D0F00FBBF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFF75F951F765D0F00FBBF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C9215964170B7B3B22C1CC0E /* Pods-Hodor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.debug.xcconfig"; sourceTree = "<group>"; };
-		F2FC72ECB6E32422B7AA7C63 /* libPods-Hodor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hodor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA24C9E1F7664F30018E4C8 /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFA24CA11F7664F30018E4C8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AFA24CA21F7664F30018E4C8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AFA24CA41F7664F30018E4C8 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		AFA24CA51F7664F30018E4C8 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AFA24CA71F7664F30018E4C8 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		AFA24CA81F7664F30018E4C8 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		AFA24CAB1F7664F30018E4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFA24CAD1F7664F30018E4C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFA24CB01F7664F30018E4C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFA24CB21F7664F30018E4C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFA24CB31F7664F30018E4C8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AFF75F7D1F765D0F00FBBF99 /* Frameworks */ = {
+		AFA24C9B1F7664F30018E4C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7908719140501068C5F29EB0 /* libPods-Hodor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8368F354B6C08D14756F203C /* Pods */ = {
+		AFA24C951F7664F30018E4C8 = {
 			isa = PBXGroup;
 			children = (
-				C9215964170B7B3B22C1CC0E /* Pods-Hodor.debug.xcconfig */,
-				7B7FE962FEA7A8EB74E59B78 /* Pods-Hodor.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		AFF75F771F765D0F00FBBF99 = {
-			isa = PBXGroup;
-			children = (
-				AFF75F821F765D0F00FBBF99 /* Hodor */,
-				AFF75F811F765D0F00FBBF99 /* Products */,
-				8368F354B6C08D14756F203C /* Pods */,
-				CD50DC833113248F73E2F0D3 /* Frameworks */,
+				AFA24CA01F7664F30018E4C8 /* Hodor */,
+				AFA24C9F1F7664F30018E4C8 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		AFF75F811F765D0F00FBBF99 /* Products */ = {
+		AFA24C9F1F7664F30018E4C8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFF75F801F765D0F00FBBF99 /* Hodor.app */,
+				AFA24C9E1F7664F30018E4C8 /* Hodor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AFF75F821F765D0F00FBBF99 /* Hodor */ = {
+		AFA24CA01F7664F30018E4C8 /* Hodor */ = {
 			isa = PBXGroup;
 			children = (
-				AFF75F831F765D0F00FBBF99 /* AppDelegate.h */,
-				AFF75F841F765D0F00FBBF99 /* AppDelegate.m */,
-				AFF75F861F765D0F00FBBF99 /* FirstViewController.h */,
-				AFF75F871F765D0F00FBBF99 /* FirstViewController.m */,
-				AFF75F891F765D0F00FBBF99 /* SecondViewController.h */,
-				AFF75F8A1F765D0F00FBBF99 /* SecondViewController.m */,
-				AFF75F8C1F765D0F00FBBF99 /* Main.storyboard */,
-				AFF75F8F1F765D0F00FBBF99 /* Assets.xcassets */,
-				AFF75F911F765D0F00FBBF99 /* LaunchScreen.storyboard */,
-				AFF75F941F765D0F00FBBF99 /* Info.plist */,
-				AFF75F951F765D0F00FBBF99 /* main.m */,
+				AFA24CA11F7664F30018E4C8 /* AppDelegate.h */,
+				AFA24CA21F7664F30018E4C8 /* AppDelegate.m */,
+				AFA24CA41F7664F30018E4C8 /* FirstViewController.h */,
+				AFA24CA51F7664F30018E4C8 /* FirstViewController.m */,
+				AFA24CA71F7664F30018E4C8 /* SecondViewController.h */,
+				AFA24CA81F7664F30018E4C8 /* SecondViewController.m */,
+				AFA24CAA1F7664F30018E4C8 /* Main.storyboard */,
+				AFA24CAD1F7664F30018E4C8 /* Assets.xcassets */,
+				AFA24CAF1F7664F30018E4C8 /* LaunchScreen.storyboard */,
+				AFA24CB21F7664F30018E4C8 /* Info.plist */,
+				AFA24CB31F7664F30018E4C8 /* main.m */,
 			);
 			path = Hodor;
-			sourceTree = "<group>";
-		};
-		CD50DC833113248F73E2F0D3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F2FC72ECB6E32422B7AA7C63 /* libPods-Hodor.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFF75F7F1F765D0F00FBBF99 /* Hodor */ = {
+		AFA24C9D1F7664F30018E4C8 /* Hodor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFF75F991F765D0F00FBBF99 /* Build configuration list for PBXNativeTarget "Hodor" */;
+			buildConfigurationList = AFA24CB71F7664F30018E4C8 /* Build configuration list for PBXNativeTarget "Hodor" */;
 			buildPhases = (
-				D7EE7988C681B2A5BDA34C52 /* [CP] Check Pods Manifest.lock */,
-				AFF75F7C1F765D0F00FBBF99 /* Sources */,
-				AFF75F7D1F765D0F00FBBF99 /* Frameworks */,
-				AFF75F7E1F765D0F00FBBF99 /* Resources */,
-				50B818DEF2591B6E082D1602 /* [CP] Embed Pods Frameworks */,
-				937678C2A3190042742E15C5 /* [CP] Copy Pods Resources */,
+				AFA24C9A1F7664F30018E4C8 /* Sources */,
+				AFA24C9B1F7664F30018E4C8 /* Frameworks */,
+				AFA24C9C1F7664F30018E4C8 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -120,25 +93,25 @@
 			);
 			name = Hodor;
 			productName = Hodor;
-			productReference = AFF75F801F765D0F00FBBF99 /* Hodor.app */;
+			productReference = AFA24C9E1F7664F30018E4C8 /* Hodor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AFF75F781F765D0F00FBBF99 /* Project object */ = {
+		AFA24C961F7664F30018E4C8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Antrov;
 				TargetAttributes = {
-					AFF75F7F1F765D0F00FBBF99 = {
+					AFA24C9D1F7664F30018E4C8 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AFF75F7B1F765D0F00FBBF99 /* Build configuration list for PBXProject "Hodor" */;
+			buildConfigurationList = AFA24C991F7664F30018E4C8 /* Build configuration list for PBXProject "Hodor" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,107 +119,56 @@
 				en,
 				Base,
 			);
-			mainGroup = AFF75F771F765D0F00FBBF99;
-			productRefGroup = AFF75F811F765D0F00FBBF99 /* Products */;
+			mainGroup = AFA24C951F7664F30018E4C8;
+			productRefGroup = AFA24C9F1F7664F30018E4C8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFF75F7F1F765D0F00FBBF99 /* Hodor */,
+				AFA24C9D1F7664F30018E4C8 /* Hodor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AFF75F7E1F765D0F00FBBF99 /* Resources */ = {
+		AFA24C9C1F7664F30018E4C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF75F931F765D0F00FBBF99 /* LaunchScreen.storyboard in Resources */,
-				AFF75F901F765D0F00FBBF99 /* Assets.xcassets in Resources */,
-				AFF75F8E1F765D0F00FBBF99 /* Main.storyboard in Resources */,
+				AFA24CB11F7664F30018E4C8 /* LaunchScreen.storyboard in Resources */,
+				AFA24CAE1F7664F30018E4C8 /* Assets.xcassets in Resources */,
+				AFA24CAC1F7664F30018E4C8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		50B818DEF2591B6E082D1602 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hodor/Pods-Hodor-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		937678C2A3190042742E15C5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hodor/Pods-Hodor-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D7EE7988C681B2A5BDA34C52 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Hodor-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		AFF75F7C1F765D0F00FBBF99 /* Sources */ = {
+		AFA24C9A1F7664F30018E4C8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF75F8B1F765D0F00FBBF99 /* SecondViewController.m in Sources */,
-				AFF75F851F765D0F00FBBF99 /* AppDelegate.m in Sources */,
-				AFF75F961F765D0F00FBBF99 /* main.m in Sources */,
-				AFF75F881F765D0F00FBBF99 /* FirstViewController.m in Sources */,
+				AFA24CA91F7664F30018E4C8 /* SecondViewController.m in Sources */,
+				AFA24CA31F7664F30018E4C8 /* AppDelegate.m in Sources */,
+				AFA24CB41F7664F30018E4C8 /* main.m in Sources */,
+				AFA24CA61F7664F30018E4C8 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AFF75F8C1F765D0F00FBBF99 /* Main.storyboard */ = {
+		AFA24CAA1F7664F30018E4C8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFF75F8D1F765D0F00FBBF99 /* Base */,
+				AFA24CAB1F7664F30018E4C8 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AFF75F911F765D0F00FBBF99 /* LaunchScreen.storyboard */ = {
+		AFA24CAF1F7664F30018E4C8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AFF75F921F765D0F00FBBF99 /* Base */,
+				AFA24CB01F7664F30018E4C8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -254,7 +176,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AFF75F971F765D0F00FBBF99 /* Debug */ = {
+		AFA24CB51F7664F30018E4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -309,7 +231,7 @@
 			};
 			name = Debug;
 		};
-		AFF75F981F765D0F00FBBF99 /* Release */ = {
+		AFA24CB61F7664F30018E4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -358,9 +280,8 @@
 			};
 			name = Release;
 		};
-		AFF75F9A1F765D0F00FBBF99 /* Debug */ = {
+		AFA24CB81F7664F30018E4C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9215964170B7B3B22C1CC0E /* Pods-Hodor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -375,9 +296,8 @@
 			};
 			name = Debug;
 		};
-		AFF75F9B1F765D0F00FBBF99 /* Release */ = {
+		AFA24CB91F7664F30018E4C8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B7FE962FEA7A8EB74E59B78 /* Pods-Hodor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -395,25 +315,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFF75F7B1F765D0F00FBBF99 /* Build configuration list for PBXProject "Hodor" */ = {
+		AFA24C991F7664F30018E4C8 /* Build configuration list for PBXProject "Hodor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFF75F971F765D0F00FBBF99 /* Debug */,
-				AFF75F981F765D0F00FBBF99 /* Release */,
+				AFA24CB51F7664F30018E4C8 /* Debug */,
+				AFA24CB61F7664F30018E4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFF75F991F765D0F00FBBF99 /* Build configuration list for PBXNativeTarget "Hodor" */ = {
+		AFA24CB71F7664F30018E4C8 /* Build configuration list for PBXNativeTarget "Hodor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFF75F9A1F765D0F00FBBF99 /* Debug */,
-				AFF75F9B1F765D0F00FBBF99 /* Release */,
+				AFA24CB81F7664F30018E4C8 /* Debug */,
+				AFA24CB91F7664F30018E4C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AFF75F781F765D0F00FBBF99 /* Project object */;
+	rootObject = AFA24C961F7664F30018E4C8 /* Project object */;
 }
