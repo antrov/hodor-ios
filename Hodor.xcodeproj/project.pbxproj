@@ -3,119 +3,99 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF07DBA01F75872600368174 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF07DB9F1F75871E00368174 /* Alamofire.framework */; };
-		AF07DBA11F75872600368174 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF07DB9F1F75871E00368174 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF2D46011F75B2B0008F4E90 /* PromiseKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */; };
-		AF2D46021F75B2B0008F4E90 /* PromiseKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		AF2D46041F75B42A008F4E90 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2D46031F75B42A008F4E90 /* UserCell.swift */; };
-		AF2D46071F75BA32008F4E90 /* avatar_lena.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF2D46051F75B987008F4E90 /* avatar_lena.jpg */; };
-		AF2D46081F75BA35008F4E90 /* avatar_hubert.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF2D46061F75B988008F4E90 /* avatar_hubert.jpg */; };
-		AF4023B51F743E0300AF1756 /* UsersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4023B41F743E0300AF1756 /* UsersController.swift */; };
-		AF4823391F719DB700E83503 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4823381F719DB700E83503 /* SettingsController.swift */; };
-		AF48233B1F71BFCE00E83503 /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF48233A1F71BFCE00E83503 /* HistoryController.swift */; };
-		AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4911F51F7063B0003701AC /* AppDelegate.swift */; };
-		AF4911F81F7063B0003701AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4911F71F7063B0003701AC /* ViewController.swift */; };
-		AF4911FB1F7063B0003701AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4911F91F7063B0003701AC /* Main.storyboard */; };
-		AF4911FD1F7063B0003701AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF4911FC1F7063B0003701AC /* Assets.xcassets */; };
-		AF4912001F7063B0003701AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF4911FE1F7063B0003701AC /* LaunchScreen.storyboard */; };
-		AF5A608D1F73104800F927FD /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5A608C1F73104800F927FD /* HistoryCell.swift */; };
+		7908719140501068C5F29EB0 /* libPods-Hodor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F2FC72ECB6E32422B7AA7C63 /* libPods-Hodor.a */; };
+		AFF75F851F765D0F00FBBF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F841F765D0F00FBBF99 /* AppDelegate.m */; };
+		AFF75F881F765D0F00FBBF99 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F871F765D0F00FBBF99 /* FirstViewController.m */; };
+		AFF75F8B1F765D0F00FBBF99 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F8A1F765D0F00FBBF99 /* SecondViewController.m */; };
+		AFF75F8E1F765D0F00FBBF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF75F8C1F765D0F00FBBF99 /* Main.storyboard */; };
+		AFF75F901F765D0F00FBBF99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFF75F8F1F765D0F00FBBF99 /* Assets.xcassets */; };
+		AFF75F931F765D0F00FBBF99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFF75F911F765D0F00FBBF99 /* LaunchScreen.storyboard */; };
+		AFF75F961F765D0F00FBBF99 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF75F951F765D0F00FBBF99 /* main.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		AF573E0B1F7580A30031B855 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AF07DBA11F75872600368174 /* Alamofire.framework in Embed Frameworks */,
-				AF2D46021F75B2B0008F4E90 /* PromiseKit.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		AF07DB9F1F75871E00368174 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
-		AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PromiseKit.framework; sourceTree = "<group>"; };
-		AF2D46031F75B42A008F4E90 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
-		AF2D46051F75B987008F4E90 /* avatar_lena.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar_lena.jpg; sourceTree = "<group>"; };
-		AF2D46061F75B988008F4E90 /* avatar_hubert.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = avatar_hubert.jpg; sourceTree = "<group>"; };
-		AF4023B41F743E0300AF1756 /* UsersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersController.swift; sourceTree = "<group>"; };
-		AF4823381F719DB700E83503 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
-		AF48233A1F71BFCE00E83503 /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
-		AF4911F21F7063B0003701AC /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AF4911F51F7063B0003701AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AF4911F71F7063B0003701AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AF4911FA1F7063B0003701AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		AF4911FC1F7063B0003701AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF4911FF1F7063B0003701AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		AF4912011F7063B0003701AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF4912081F706A84003701AC /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		AF5A608C1F73104800F927FD /* HistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
+		7B7FE962FEA7A8EB74E59B78 /* Pods-Hodor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.release.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.release.xcconfig"; sourceTree = "<group>"; };
+		AFF75F801F765D0F00FBBF99 /* Hodor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hodor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF75F831F765D0F00FBBF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AFF75F841F765D0F00FBBF99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AFF75F861F765D0F00FBBF99 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		AFF75F871F765D0F00FBBF99 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		AFF75F891F765D0F00FBBF99 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		AFF75F8A1F765D0F00FBBF99 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		AFF75F8D1F765D0F00FBBF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AFF75F8F1F765D0F00FBBF99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFF75F921F765D0F00FBBF99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AFF75F941F765D0F00FBBF99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFF75F951F765D0F00FBBF99 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9215964170B7B3B22C1CC0E /* Pods-Hodor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Hodor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Hodor/Pods-Hodor.debug.xcconfig"; sourceTree = "<group>"; };
+		F2FC72ECB6E32422B7AA7C63 /* libPods-Hodor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Hodor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		AF4911EF1F7063B0003701AC /* Frameworks */ = {
+		AFF75F7D1F765D0F00FBBF99 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF07DBA01F75872600368174 /* Alamofire.framework in Frameworks */,
-				AF2D46011F75B2B0008F4E90 /* PromiseKit.framework in Frameworks */,
+				7908719140501068C5F29EB0 /* libPods-Hodor.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AF4911E91F7063B0003701AC = {
+		8368F354B6C08D14756F203C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AF4911F41F7063B0003701AC /* Hodor */,
-				AF4911F31F7063B0003701AC /* Products */,
-				AF4912071F706A84003701AC /* Frameworks */,
+				C9215964170B7B3B22C1CC0E /* Pods-Hodor.debug.xcconfig */,
+				7B7FE962FEA7A8EB74E59B78 /* Pods-Hodor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AFF75F771F765D0F00FBBF99 = {
+			isa = PBXGroup;
+			children = (
+				AFF75F821F765D0F00FBBF99 /* Hodor */,
+				AFF75F811F765D0F00FBBF99 /* Products */,
+				8368F354B6C08D14756F203C /* Pods */,
+				CD50DC833113248F73E2F0D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		AF4911F31F7063B0003701AC /* Products */ = {
+		AFF75F811F765D0F00FBBF99 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AF4911F21F7063B0003701AC /* Hodor.app */,
+				AFF75F801F765D0F00FBBF99 /* Hodor.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AF4911F41F7063B0003701AC /* Hodor */ = {
+		AFF75F821F765D0F00FBBF99 /* Hodor */ = {
 			isa = PBXGroup;
 			children = (
-				AF4911F51F7063B0003701AC /* AppDelegate.swift */,
-				AF4911F71F7063B0003701AC /* ViewController.swift */,
-				AF4911F91F7063B0003701AC /* Main.storyboard */,
-				AF4911FC1F7063B0003701AC /* Assets.xcassets */,
-				AF4911FE1F7063B0003701AC /* LaunchScreen.storyboard */,
-				AF4912011F7063B0003701AC /* Info.plist */,
-				AF4823381F719DB700E83503 /* SettingsController.swift */,
-				AF48233A1F71BFCE00E83503 /* HistoryController.swift */,
-				AF5A608C1F73104800F927FD /* HistoryCell.swift */,
-				AF4023B41F743E0300AF1756 /* UsersController.swift */,
-				AF2D46051F75B987008F4E90 /* avatar_lena.jpg */,
-				AF2D46061F75B988008F4E90 /* avatar_hubert.jpg */,
-				AF2D46031F75B42A008F4E90 /* UserCell.swift */,
+				AFF75F831F765D0F00FBBF99 /* AppDelegate.h */,
+				AFF75F841F765D0F00FBBF99 /* AppDelegate.m */,
+				AFF75F861F765D0F00FBBF99 /* FirstViewController.h */,
+				AFF75F871F765D0F00FBBF99 /* FirstViewController.m */,
+				AFF75F891F765D0F00FBBF99 /* SecondViewController.h */,
+				AFF75F8A1F765D0F00FBBF99 /* SecondViewController.m */,
+				AFF75F8C1F765D0F00FBBF99 /* Main.storyboard */,
+				AFF75F8F1F765D0F00FBBF99 /* Assets.xcassets */,
+				AFF75F911F765D0F00FBBF99 /* LaunchScreen.storyboard */,
+				AFF75F941F765D0F00FBBF99 /* Info.plist */,
+				AFF75F951F765D0F00FBBF99 /* main.m */,
 			);
 			path = Hodor;
 			sourceTree = "<group>";
 		};
-		AF4912071F706A84003701AC /* Frameworks */ = {
+		CD50DC833113248F73E2F0D3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF2D46001F75B2AA008F4E90 /* PromiseKit.framework */,
-				AF07DB9F1F75871E00368174 /* Alamofire.framework */,
-				AF4912081F706A84003701AC /* CoreMotion.framework */,
+				F2FC72ECB6E32422B7AA7C63 /* libPods-Hodor.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,14 +103,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AF4911F11F7063B0003701AC /* Hodor */ = {
+		AFF75F7F1F765D0F00FBBF99 /* Hodor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AF4912041F7063B0003701AC /* Build configuration list for PBXNativeTarget "Hodor" */;
+			buildConfigurationList = AFF75F991F765D0F00FBBF99 /* Build configuration list for PBXNativeTarget "Hodor" */;
 			buildPhases = (
-				AF4911EE1F7063B0003701AC /* Sources */,
-				AF4911EF1F7063B0003701AC /* Frameworks */,
-				AF4911F01F7063B0003701AC /* Resources */,
-				AF573E0B1F7580A30031B855 /* Embed Frameworks */,
+				D7EE7988C681B2A5BDA34C52 /* [CP] Check Pods Manifest.lock */,
+				AFF75F7C1F765D0F00FBBF99 /* Sources */,
+				AFF75F7D1F765D0F00FBBF99 /* Frameworks */,
+				AFF75F7E1F765D0F00FBBF99 /* Resources */,
+				50B818DEF2591B6E082D1602 /* [CP] Embed Pods Frameworks */,
+				937678C2A3190042742E15C5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,89 +120,133 @@
 			);
 			name = Hodor;
 			productName = Hodor;
-			productReference = AF4911F21F7063B0003701AC /* Hodor.app */;
+			productReference = AFF75F801F765D0F00FBBF99 /* Hodor.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		AF4911EA1F7063B0003701AC /* Project object */ = {
+		AFF75F781F765D0F00FBBF99 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = Antrov;
 				TargetAttributes = {
-					AF4911F11F7063B0003701AC = {
-						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 8JCQ7MZJ24;
+					AFF75F7F1F765D0F00FBBF99 = {
+						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = AF4911ED1F7063B0003701AC /* Build configuration list for PBXProject "Hodor" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			buildConfigurationList = AFF75F7B1F765D0F00FBBF99 /* Build configuration list for PBXProject "Hodor" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = AF4911E91F7063B0003701AC;
-			productRefGroup = AF4911F31F7063B0003701AC /* Products */;
+			mainGroup = AFF75F771F765D0F00FBBF99;
+			productRefGroup = AFF75F811F765D0F00FBBF99 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AF4911F11F7063B0003701AC /* Hodor */,
+				AFF75F7F1F765D0F00FBBF99 /* Hodor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		AF4911F01F7063B0003701AC /* Resources */ = {
+		AFF75F7E1F765D0F00FBBF99 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF2D46071F75BA32008F4E90 /* avatar_lena.jpg in Resources */,
-				AF4912001F7063B0003701AC /* LaunchScreen.storyboard in Resources */,
-				AF4911FD1F7063B0003701AC /* Assets.xcassets in Resources */,
-				AF2D46081F75BA35008F4E90 /* avatar_hubert.jpg in Resources */,
-				AF4911FB1F7063B0003701AC /* Main.storyboard in Resources */,
+				AFF75F931F765D0F00FBBF99 /* LaunchScreen.storyboard in Resources */,
+				AFF75F901F765D0F00FBBF99 /* Assets.xcassets in Resources */,
+				AFF75F8E1F765D0F00FBBF99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		50B818DEF2591B6E082D1602 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hodor/Pods-Hodor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		937678C2A3190042742E15C5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Hodor/Pods-Hodor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7EE7988C681B2A5BDA34C52 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Hodor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		AF4911EE1F7063B0003701AC /* Sources */ = {
+		AFF75F7C1F765D0F00FBBF99 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF4823391F719DB700E83503 /* SettingsController.swift in Sources */,
-				AF4911F81F7063B0003701AC /* ViewController.swift in Sources */,
-				AF4023B51F743E0300AF1756 /* UsersController.swift in Sources */,
-				AF48233B1F71BFCE00E83503 /* HistoryController.swift in Sources */,
-				AF4911F61F7063B0003701AC /* AppDelegate.swift in Sources */,
-				AF5A608D1F73104800F927FD /* HistoryCell.swift in Sources */,
-				AF2D46041F75B42A008F4E90 /* UserCell.swift in Sources */,
+				AFF75F8B1F765D0F00FBBF99 /* SecondViewController.m in Sources */,
+				AFF75F851F765D0F00FBBF99 /* AppDelegate.m in Sources */,
+				AFF75F961F765D0F00FBBF99 /* main.m in Sources */,
+				AFF75F881F765D0F00FBBF99 /* FirstViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AF4911F91F7063B0003701AC /* Main.storyboard */ = {
+		AFF75F8C1F765D0F00FBBF99 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF4911FA1F7063B0003701AC /* Base */,
+				AFF75F8D1F765D0F00FBBF99 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		AF4911FE1F7063B0003701AC /* LaunchScreen.storyboard */ = {
+		AFF75F911F765D0F00FBBF99 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				AF4911FF1F7063B0003701AC /* Base */,
+				AFF75F921F765D0F00FBBF99 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -228,17 +254,19 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		AF4912021F7063B0003701AC /* Debug */ = {
+		AFF75F971F765D0F00FBBF99 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -246,16 +274,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -269,26 +302,26 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		AF4912031F7063B0003701AC /* Release */ = {
+		AFF75F981F765D0F00FBBF99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -296,16 +329,21 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -313,74 +351,69 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		AF4912051F7063B0003701AC /* Debug */ = {
+		AFF75F9A1F765D0F00FBBF99 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9215964170B7B3B22C1CC0E /* Pods-Hodor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JCQ7MZJ24;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Hodor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.hodor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Hodor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SDKROOT = iphoneos10.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		AF4912061F7063B0003701AC /* Release */ = {
+		AFF75F9B1F765D0F00FBBF99 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B7FE962FEA7A8EB74E59B78 /* Pods-Hodor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8JCQ7MZJ24;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				INFOPLIST_FILE = Hodor/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.hodor;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antrov.Hodor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 3.0;
+				SDKROOT = iphoneos10.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AF4911ED1F7063B0003701AC /* Build configuration list for PBXProject "Hodor" */ = {
+		AFF75F7B1F765D0F00FBBF99 /* Build configuration list for PBXProject "Hodor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF4912021F7063B0003701AC /* Debug */,
-				AF4912031F7063B0003701AC /* Release */,
+				AFF75F971F765D0F00FBBF99 /* Debug */,
+				AFF75F981F765D0F00FBBF99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AF4912041F7063B0003701AC /* Build configuration list for PBXNativeTarget "Hodor" */ = {
+		AFF75F991F765D0F00FBBF99 /* Build configuration list for PBXNativeTarget "Hodor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AF4912051F7063B0003701AC /* Debug */,
-				AF4912061F7063B0003701AC /* Release */,
+				AFF75F9A1F765D0F00FBBF99 /* Debug */,
+				AFF75F9B1F765D0F00FBBF99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = AF4911EA1F7063B0003701AC /* Project object */;
+	rootObject = AFF75F781F765D0F00FBBF99 /* Project object */;
 }
