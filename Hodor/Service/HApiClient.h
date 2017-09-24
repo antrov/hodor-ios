@@ -16,5 +16,6 @@
 + (HApiClient*)instance;
 
 - (PMKPromise *)getUsers;
+- (PMKPromise *)getMeasurements;
 
 @end

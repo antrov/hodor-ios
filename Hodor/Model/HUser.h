@@ -12,5 +12,5 @@
 @interface HUser : JSONModel
 @property (nonatomic) NSString *id;
 @property (nonatomic) NSString *name;
-//@property (nonatomic) UIImage *avatar;
+@property (nonatomic) UIImage *avatar;
 @end

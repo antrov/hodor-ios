@@ -8,6 +8,29 @@
 
 #import "HMeasurement.h"
 
+@interface JSONValueTransformer (CustomNSDate)
+@end
+
+@implementation JSONValueTransformer (CustomTransformer)
+
+- (NSDate *)NSDateFromNSString:(NSString *)string {
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+    return [formatter dateFromString:string];
+}
+
+- (NSString *)JSONObjectFromNSDate:(NSDate *)date {
+    NSDateFormatter *formatter = [NSDateFormatter new];
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
+    return [formatter stringFromDate:date];
+}
+
+@end
+
 @implementation HMeasurement
+
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [@[ @"userId", @"user" ] containsObject:propertyName];
+}
 
 @end

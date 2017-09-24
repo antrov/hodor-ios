@@ -54,7 +54,7 @@ static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
 
 #pragma mark Public methods
 
-- (PMKPromise *)getUsers {
+- (PMKPromise *)getUsers {    
     return [self getResourceArray:@"/users" expectedResultClass:HUser.class];
 }
 
