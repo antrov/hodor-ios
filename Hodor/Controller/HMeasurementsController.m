@@ -6,10 +6,15 @@
 //  Copyright © 2017 Antrov. All rights reserved.
 //
 
+#import "HApiClient.h"
+#import "HMeasurement.h"
+#import "HMeasurementCell.h"
 #import "HMeasurementsController.h"
+#import "MBProgressHUD.h"
 
 @interface HMeasurementsController ()
-
+@property (nonatomic) NSArray<HMeasurement *> *measurements;
+@property (nonatomic) NSDateFormatter *formatter;
 @end
 
 @implementation HMeasurementsController
@@ -17,74 +22,44 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.formatter = [NSDateFormatter new];
+    self.formatter.dateStyle = NSISO8601DateFormatWithDay;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    HApiClient.instance.getMeasurements.then(^(id measurements) {
+        self.measurements = measurements;
+        [self.tableView reloadData];
+    }).catch(^(NSError *error) {
+        
+    }).finally(^() {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
+#pragma mark - <UITableViewDataSource>
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 20;
+    return self.measurements.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [tableView dequeueReusableCellWithIdentifier:@"MeasurementCell" forIndexPath:indexPath];
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+#pragma mark - <UITableViewDelegate>
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    HMeasurementCell *measurementCell = (HMeasurementCell *)cell;
+    HMeasurement *measurement = self.measurements[indexPath.row];
+    
+    measurementCell.avatarImgView.image = measurement.user.avatar;
+    measurementCell.titleLabel.text = measurement.user.name;
+    measurementCell.statusLabel.text = [self.formatter stringFromDate:measurement.timestamp];
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

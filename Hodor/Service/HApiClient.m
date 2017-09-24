@@ -59,7 +59,7 @@ static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
 }
 
 - (PMKPromise *)getMeasurements {
-    return [self getResourceArray:@"/measurements" expectedResultClass:HMeasurement.class];
+    return [self getResourceArray:@"/measurements?_expand=user" expectedResultClass:HMeasurement.class];
 }
 
 

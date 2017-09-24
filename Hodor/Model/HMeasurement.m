@@ -30,7 +30,7 @@
 @implementation HMeasurement
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
-    return [@[ @"userId", @"user" ] containsObject:propertyName];
+    return [@[ @"user" ] containsObject:propertyName];
 }
 
 @end
