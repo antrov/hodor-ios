@@ -11,6 +11,8 @@
 
 static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
 
+NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.changed";
+
 @interface HApiClient ()
 @property (nonatomic) AFHTTPSessionManager *manager;
 @end
@@ -52,15 +54,43 @@ static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
     }];
 }
 
+- (PMKPromise *)createResource:(JSONModel *)resource endpoint:(NSString *)endpoint {
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+       [self.manager POST:endpoint parameters:[resource toDictionary] progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+           fulfill(responseObject);
+       } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+           reject(error);
+       }];
+    }];
+}
+
+- (PMKPromise *)updateResource:(JSONModel *)resource endpoint:(NSString *)endpoint {
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        [self.manager PUT:endpoint parameters:[resource toDictionary] success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            fulfill(responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            reject(error);
+        }];
+    }];
+}
+
 #pragma mark Public methods
 
 - (PMKPromise *)getUsers {    
     return [self getResourceArray:@"/users" expectedResultClass:HUser.class];
 }
 
+
+- (PMKPromise *)createUser:(HUser *)user {
+    return [self createResource:user endpoint:@"/users"];
+}
+
+- (PMKPromise *)updateUser:(HUser *)user {
+    return [self updateResource:user endpoint:@"/users"];
+}
+
 - (PMKPromise *)getMeasurements {
     return [self getResourceArray:@"/measurements?_expand=user" expectedResultClass:HMeasurement.class];
 }
-
 
 @end

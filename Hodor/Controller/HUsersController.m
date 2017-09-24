@@ -7,6 +7,7 @@
 //
 
 #import "HUsersController.h"
+#import "HUserFormController.h"
 #import "HUserCell.h"
 #import "HApiClient.h"
 #import "MBProgressHUD.h"
@@ -19,7 +20,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self fetchUsers];
     
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(userDataChangedNotification:) name:HUserDataChangedNotification object:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSIndexPath *selected = self.collectionView.indexPathsForSelectedItems.firstObject;
+    
+    if ([segue.identifier isEqual:@"UserFormSegue"] && selected != nil) {
+        UINavigationController *navigationController = (UINavigationController *)segue.destinationViewController;
+        HUserFormController *userForm = (HUserFormController *)navigationController.topViewController;
+        
+        [userForm setUser:self.users[selected.item]];
+    }
+}
+
+- (void)userDataChangedNotification:(NSNotification *)notification {
+    [self fetchUsers];
+}
+
+- (void)fetchUsers {
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     HApiClient.instance.getUsers.then(^(id users) {
@@ -54,5 +75,9 @@
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"UserFormSegue" sender:self];
+}
 
 @end

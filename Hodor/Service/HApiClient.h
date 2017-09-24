@@ -16,6 +16,11 @@
 + (HApiClient*)instance;
 
 - (PMKPromise *)getUsers;
+- (PMKPromise *)createUser:(HUser *)user;
+- (PMKPromise *)updateUser:(HUser *)user;
+
 - (PMKPromise *)getMeasurements;
 
 @end
+
+extern NSString * const HUserDataChangedNotification;
