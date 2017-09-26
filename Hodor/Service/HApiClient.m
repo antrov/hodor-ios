@@ -32,6 +32,7 @@ NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.chan
     if (self = [super init]) {
         self.manager = [[AFHTTPSessionManager alloc] initWithBaseURL:[NSURL URLWithString:apiBaseUrl]];
         self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+        self.manager.requestSerializer = [AFJSONRequestSerializer serializer];
     }
     
     return self;
@@ -74,19 +75,32 @@ NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.chan
     }];
 }
 
+- (PMKPromise *)deleteResource:(NSString *)endpoint {
+    return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
+        [self.manager DELETE:endpoint parameters:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+            fulfill(responseObject);
+        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+            reject(error);
+        }];
+    }];
+}
+
 #pragma mark Public methods
 
 - (PMKPromise *)getUsers {    
     return [self getResourceArray:@"/users" expectedResultClass:HUser.class];
 }
 
-
 - (PMKPromise *)createUser:(HUser *)user {
     return [self createResource:user endpoint:@"/users"];
 }
 
 - (PMKPromise *)updateUser:(HUser *)user {
-    return [self updateResource:user endpoint:@"/users"];
+    return [self updateResource:user endpoint:[NSString stringWithFormat:@"/%@/%@", @"users", user.id]];
+}
+
+- (PMKPromise *)deleteUser:(HUser *)user {
+    return [self deleteResource:[NSString stringWithFormat:@"/%@/%@", @"users", user.id]];
 }
 
 - (PMKPromise *)getMeasurements {

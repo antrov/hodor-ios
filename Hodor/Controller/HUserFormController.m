@@ -59,7 +59,6 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-// Only for stub server https://stackoverflow.com/questions/2658738/the-simplest-way-to-resize-an-uiimage
 + (UIImage *)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize {
     UIGraphicsBeginImageContextWithOptions(newSize, NO, 0.0);
     [image drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
@@ -78,6 +77,7 @@
     if (userModified) {
         self.user.name = self.nameTextField.text;
         self.user.avatar = [HUserFormController imageWithImage:self.avatarImgView.image scaledToSize:CGSizeMake(75, 75)];
+        //self.user.photo = self.avatarImgView.image;
     }
     
     if (userCreated)
@@ -98,6 +98,17 @@
 }
 
 - (IBAction)deleteBtnAction:(id)sender {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    [HApiClient.instance deleteUser:self.user].then(^(){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }).then(^(){
+        [NSNotificationCenter.defaultCenter postNotificationName:HUserDataChangedNotification object:nil];
+    }).catch(^(NSError *error){
+        
+    }).finally(^() {
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+    });
 }
 
 - (IBAction)photoBtnAction:(id)sender {

@@ -28,4 +28,9 @@
 
 @implementation HUser
 
++ (BOOL)propertyIsOptional:(NSString *)propertyName {
+    return [@[ @"photo" ] containsObject:propertyName];
+}
+
+
 @end

@@ -18,6 +18,7 @@
 - (PMKPromise *)getUsers;
 - (PMKPromise *)createUser:(HUser *)user;
 - (PMKPromise *)updateUser:(HUser *)user;
+- (PMKPromise *)deleteUser:(HUser *)user;
 
 - (PMKPromise *)getMeasurements;
 

@@ -13,4 +13,5 @@
 @property (nonatomic) NSString *id;
 @property (nonatomic) NSString *name;
 @property (nonatomic) UIImage *avatar;
+@property (nonatomic) UIImage *photo;
 @end
