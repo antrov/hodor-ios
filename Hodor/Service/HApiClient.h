@@ -21,6 +21,7 @@
 - (PMKPromise *)deleteUser:(HUser *)user;
 
 - (PMKPromise *)getMeasurements;
+- (PMKPromise *)createMeasurement:(HMeasurement *)measurement;
 
 @end
 

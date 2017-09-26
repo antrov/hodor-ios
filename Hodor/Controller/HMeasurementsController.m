@@ -13,7 +13,7 @@
 #import "MBProgressHUD.h"
 
 @interface HMeasurementsController ()
-@property (nonatomic) NSArray<HMeasurement *> *measurements;
+@property (nonatomic) NSMutableArray<HMeasurement *> *measurements;
 @property (nonatomic) NSDateFormatter *formatter;
 @end
 
@@ -28,13 +28,16 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     HApiClient.instance.getMeasurements.then(^(id measurements) {
-        self.measurements = measurements;
+        self.measurements = [measurements mutableCopy];
         [self.tableView reloadData];
     }).catch(^(NSError *error) {
-        
+        self.measurements = [NSMutableArray new];
     }).finally(^() {
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(testAddAction:)];
+    self.navigationItem.rightBarButtonItem = item;
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -57,9 +60,46 @@
     HMeasurementCell *measurementCell = (HMeasurementCell *)cell;
     HMeasurement *measurement = self.measurements[indexPath.row];
     
-    measurementCell.avatarImgView.image = measurement.user.avatar;
     measurementCell.titleLabel.text = measurement.user.name;
+    measurementCell.avatarImgView.image = measurement.user.avatar;
+    measurementCell.avatarImgView.hidden = measurement.id == nil;
+    measurementCell.activityIndicator.hidden = measurement.id != nil;
     measurementCell.statusLabel.text = [self.formatter stringFromDate:measurement.timestamp];
+    
+    if (!measurement.id) {
+        measurementCell.titleLabel.text = @"Pending";
+        [measurementCell.activityIndicator startAnimating];
+    }
+}
+
+- (IBAction)testAddAction:(NSObject *)sender {
+    HMeasurement *m = [HMeasurement new];
+    m.timestamp = [NSDate new];
+    
+    [self.measurements insertObject:m atIndex:0];
+    [self.tableView reloadData];
+    
+    __weak HMeasurementsController *weakSelf = self;
+    static HUser *unrecognizedUser;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        unrecognizedUser = [HUser new];
+        unrecognizedUser.name = @"Unrecognized";
+        unrecognizedUser.avatar = [UIImage imageNamed:@"user"];
+    });
+    
+    [HApiClient.instance createMeasurement:m].then(^(HMeasurement *measruement) {
+        NSInteger index = [weakSelf.measurements indexOfObject:m];
+        
+        if (!measruement.user) {
+            measruement.user = unrecognizedUser;
+        }
+        
+        if (index != NSNotFound) {
+            [weakSelf.measurements replaceObjectAtIndex:index withObject:measruement];
+            [weakSelf.tableView reloadData];
+        }
+    });
 }
 
 @end

@@ -51,17 +51,23 @@
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="jIH-i1-tYf">
+                                            <rect key="frame" x="17" y="12" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="QVf-74-oU8" firstAttribute="centerY" secondItem="hZh-mH-3Nv" secondAttribute="centerY" id="AhK-A1-t5f"/>
                                         <constraint firstItem="7m9-N5-0XW" firstAttribute="leading" secondItem="QVf-74-oU8" secondAttribute="trailing" constant="15" id="GSW-xk-f7x"/>
                                         <constraint firstItem="QVf-74-oU8" firstAttribute="leading" secondItem="hZh-mH-3Nv" secondAttribute="leading" constant="15" id="Mht-Lu-1fB"/>
                                         <constraint firstItem="iXc-jg-4lB" firstAttribute="top" secondItem="QVf-74-oU8" secondAttribute="top" id="RpM-Uk-H6N"/>
+                                        <constraint firstItem="jIH-i1-tYf" firstAttribute="centerY" secondItem="QVf-74-oU8" secondAttribute="centerY" id="Rzl-ez-nbr"/>
+                                        <constraint firstItem="jIH-i1-tYf" firstAttribute="centerX" secondItem="QVf-74-oU8" secondAttribute="centerX" id="Wlk-YF-q7U"/>
                                         <constraint firstItem="7m9-N5-0XW" firstAttribute="centerY" secondItem="hZh-mH-3Nv" secondAttribute="centerY" id="hbK-P7-MwX"/>
                                         <constraint firstAttribute="trailing" secondItem="iXc-jg-4lB" secondAttribute="trailing" constant="15" id="oZt-AF-Fxd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="jIH-i1-tYf" id="TRv-mc-FG3"/>
                                     <outlet property="avatarImgView" destination="QVf-74-oU8" id="3Li-l8-B2Y"/>
                                     <outlet property="statusLabel" destination="iXc-jg-4lB" id="qbW-5z-ZrN"/>
                                     <outlet property="titleLabel" destination="7m9-N5-0XW" id="nAf-sn-NUv"/>

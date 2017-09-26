@@ -21,7 +21,7 @@
 
 - (NSString *)JSONObjectFromNSDate:(NSDate *)date {
     NSDateFormatter *formatter = [NSDateFormatter new];
-    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
+    formatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSSZ";
     return [formatter stringFromDate:date];
 }
 

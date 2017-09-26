@@ -58,7 +58,15 @@ NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.chan
 - (PMKPromise *)createResource:(JSONModel *)resource endpoint:(NSString *)endpoint {
     return [PMKPromise new:^(PMKFulfiller fulfill, PMKRejecter reject) {
        [self.manager POST:endpoint parameters:[resource toDictionary] progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-           fulfill(responseObject);
+           NSError *jsonError;
+           id response = [[resource.class alloc] initWithData:responseObject error:&jsonError];
+           
+           if (jsonError == nil) {
+               fulfill(response);
+           } else {
+               reject(jsonError);
+           }
+
        } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
            reject(error);
        }];
@@ -85,7 +93,9 @@ NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.chan
     }];
 }
 
-#pragma mark Public methods
+#pragma mark - Public methods
+
+#pragma mark User
 
 - (PMKPromise *)getUsers {    
     return [self getResourceArray:@"/users" expectedResultClass:HUser.class];
@@ -103,8 +113,14 @@ NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.chan
     return [self deleteResource:[NSString stringWithFormat:@"/%@/%@", @"users", user.id]];
 }
 
+#pragma mark Measurement
+
 - (PMKPromise *)getMeasurements {
     return [self getResourceArray:@"/measurements?_expand=user" expectedResultClass:HMeasurement.class];
+}
+
+- (PMKPromise *)createMeasurement:(HMeasurement *)measurement {
+    return [self createResource:measurement endpoint:@"/measurements"];
 }
 
 @end

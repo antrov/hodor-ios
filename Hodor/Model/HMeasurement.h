@@ -10,6 +10,7 @@
 #import "HUser.h"
 
 @interface HMeasurement: JSONModel
+@property (nonatomic) NSString *id;
 @property (nonatomic) HUser *user;
 @property (nonatomic) NSDate *timestamp;
 @end
