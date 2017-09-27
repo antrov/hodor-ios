@@ -334,7 +334,7 @@
         <!--Settings-->
         <scene sceneID="f9o-sP-xxv">
             <objects>
-                <tableViewController id="Wrp-Aa-cbw" sceneMemberID="viewController">
+                <tableViewController id="Wrp-Aa-cbw" customClass="HSettingsController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="2ni-XU-MPq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -409,18 +409,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:00 - 16:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwy-La-Cbn">
-                                                    <rect key="frame" x="209.5" y="11" width="95.5" height="21"/>
-                                                    <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="8:00 - 16:00" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lsb-iR-CvS">
+                                                    <rect key="frame" x="147" y="11.5" width="158" height="21"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="Wrp-Aa-cbw" id="BcN-LO-tv8"/>
+                                                    </connections>
+                                                </textField>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="qwy-La-Cbn" firstAttribute="centerY" secondItem="K2V-u3-mbd" secondAttribute="centerY" id="E3O-G3-Mwe"/>
+                                                <constraint firstItem="Lsb-iR-CvS" firstAttribute="centerY" secondItem="K2V-u3-mbd" secondAttribute="centerY" id="5Qd-s2-Yah"/>
+                                                <constraint firstAttribute="trailing" secondItem="Lsb-iR-CvS" secondAttribute="trailing" constant="15" id="BUG-xA-kPr"/>
                                                 <constraint firstItem="Nuq-fa-QPC" firstAttribute="leading" secondItem="K2V-u3-mbd" secondAttribute="leading" constant="15" id="aRa-Q0-zZQ"/>
-                                                <constraint firstAttribute="trailing" secondItem="qwy-La-Cbn" secondAttribute="trailing" constant="15" id="e4I-mI-uXX"/>
+                                                <constraint firstItem="Lsb-iR-CvS" firstAttribute="leading" secondItem="Nuq-fa-QPC" secondAttribute="trailing" constant="15" id="aZG-GS-vMl"/>
                                                 <constraint firstItem="Nuq-fa-QPC" firstAttribute="centerY" secondItem="K2V-u3-mbd" secondAttribute="centerY" id="nKU-xT-x3R"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -434,8 +438,41 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="075-22-RZV"/>
+                    <connections>
+                        <outlet property="autoTurnOffSwitch" destination="Jjy-dg-IXD" id="KF3-Pl-Zay"/>
+                        <outlet property="darnkessDetectionSwitch" destination="9et-lo-5Mf" id="7dj-tL-kbH"/>
+                        <outlet property="hoursPicker" destination="dEf-tS-ub3" id="qMB-z8-opR"/>
+                        <outlet property="hoursTextField" destination="Lsb-iR-CvS" id="HnD-8D-MIV"/>
+                        <outlet property="hoursToolbar" destination="wo3-pw-fTK" id="Iqm-Ze-haq"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cld-Sf-gEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pickerView contentMode="scaleToFill" id="dEf-tS-ub3">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="Wrp-Aa-cbw" id="caY-il-x91"/>
+                        <outlet property="delegate" destination="Wrp-Aa-cbw" id="aKZ-2V-JT9"/>
+                    </connections>
+                </pickerView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="wo3-pw-fTK">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="Clear" id="CuW-Dw-ETL">
+                            <connections>
+                                <action selector="clearBtnAction:" destination="Wrp-Aa-cbw" id="w6s-10-464"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="d3O-OO-VZc"/>
+                        <barButtonItem style="done" systemItem="done" id="jaU-Ma-eQY">
+                            <connections>
+                                <action selector="doneBtnAction:" destination="Wrp-Aa-cbw" id="6P6-0b-KPg"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
             </objects>
             <point key="canvasLocation" x="1433" y="1832"/>
         </scene>
