@@ -29,8 +29,8 @@
 
 @implementation HMeasurement
 
-+ (BOOL)propertyIsOptional:(NSString *)propertyName {
-    return [@[ @"user" ] containsObject:propertyName];
+- (NSString *)JSONObjectForUser {
+    return nil;
 }
 
 @end

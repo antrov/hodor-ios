@@ -11,6 +11,7 @@
 
 @interface HMeasurement: JSONModel
 @property (nonatomic) NSString *id;
-@property (nonatomic) HUser *user;
+@property (nonatomic) HUser <Optional> *user;
+@property (nonatomic) NSString <Optional> *userId;
 @property (nonatomic) NSDate *timestamp;
 @end

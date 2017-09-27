@@ -24,7 +24,7 @@
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MeasurementCell" id="VVb-VY-HuZ" customClass="HMeasurementCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MeasurementCell" id="VVb-VY-HuZ" customClass="HMeasurementCell">
                                 <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VVb-VY-HuZ" id="hZh-mH-3Nv">
@@ -88,7 +88,7 @@
         <!--Users-->
         <scene sceneID="2m4-3f-pdi">
             <objects>
-                <collectionViewController id="vp0-Bg-t1S" customClass="HUsersController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="UsersController" id="vp0-Bg-t1S" customClass="HUsersController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wGZ-P5-LPG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,10 +141,14 @@
                         <connections>
                             <outlet property="dataSource" destination="vp0-Bg-t1S" id="1Fj-n1-O8u"/>
                             <outlet property="delegate" destination="vp0-Bg-t1S" id="xdA-1J-eSD"/>
-                            <outletCollection property="gestureRecognizers" destination="xxI-gy-rdy" appends="YES" id="Ru5-Y3-lW7"/>
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Users" id="uKd-8Z-cGs">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="VFl-1U-dai">
+                            <connections>
+                                <action selector="cancelBtnAction:" destination="vp0-Bg-t1S" id="Xd0-6I-Rac"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ofe-Gq-hBT">
                             <connections>
                                 <segue destination="J01-Mf-X8y" kind="presentation" identifier="UserFormSegue" id="iiR-zU-lyQ"/>
@@ -153,7 +157,6 @@
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="csi-NH-E11" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="xxI-gy-rdy"/>
             </objects>
             <point key="canvasLocation" x="335" y="1832"/>
         </scene>

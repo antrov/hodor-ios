@@ -10,7 +10,9 @@
 #import "HMeasurement.h"
 #import "HMeasurementCell.h"
 #import "HMeasurementsController.h"
+#import "HUsersController.h"
 #import "MBProgressHUD.h"
+#import "UIViewController+PromiseKit.h"
 
 @interface HMeasurementsController ()
 @property (nonatomic) NSMutableArray<HMeasurement *> *measurements;
@@ -38,6 +40,48 @@
     
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(testAddAction:)];
     self.navigationItem.rightBarButtonItem = item;
+}
+
+- (void)presentUserSelectorForMeasurement:(HMeasurement *)measurement {
+    HUsersController *usersController = [self.storyboard instantiateViewControllerWithIdentifier:@"UsersController"];
+    UINavigationController *navigation = [[UINavigationController alloc] initWithRootViewController:usersController];
+    
+    __weak HMeasurementsController *weakSelf = self;
+    
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    [self promiseViewController:navigation animated:YES completion:nil].then(^(HUser *user) {
+        measurement.user = user;
+        measurement.userId = user.id;
+        return [HApiClient.instance updateMeasurement:measurement];
+    }).then(^(HMeasurement *result) {
+        [weakSelf updateMeasurement:measurement with:result];
+    }).catch(^(NSError *error) {
+        NSLog(@"%@", error);
+    }).finally(^() {
+        [MBProgressHUD hideHUDForView:weakSelf.view animated:YES];
+    });
+}
+
+- (void)updateMeasurement:(HMeasurement *)old with:(HMeasurement *)new {
+    NSInteger index = [self.measurements indexOfObject:old];
+    
+    static HUser *unrecognizedUser;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        unrecognizedUser = [HUser new];
+        unrecognizedUser.name = @"Unrecognized";
+        unrecognizedUser.avatar = [UIImage imageNamed:@"user"];
+    });
+    
+    if (!new.user) {
+        new.user = unrecognizedUser;
+    }
+    
+    if (index != NSNotFound) {
+        [self.measurements replaceObjectAtIndex:index withObject:new];
+        [self.tableView reloadData];
+    }
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -72,33 +116,27 @@
     }
 }
 
+- (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath {
+    return self.measurements[indexPath.row].id != nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self presentUserSelectorForMeasurement:self.measurements[indexPath.row]];
+}
+
+// For testing purposes; Should be change to notifications deriven methods
 - (IBAction)testAddAction:(NSObject *)sender {
-    HMeasurement *m = [HMeasurement new];
-    m.timestamp = [NSDate new];
+    HMeasurement *measurement = [HMeasurement new];
+    measurement.timestamp = [NSDate new];
     
-    [self.measurements insertObject:m atIndex:0];
+    [self.measurements insertObject:measurement atIndex:0];
     [self.tableView reloadData];
     
     __weak HMeasurementsController *weakSelf = self;
-    static HUser *unrecognizedUser;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        unrecognizedUser = [HUser new];
-        unrecognizedUser.name = @"Unrecognized";
-        unrecognizedUser.avatar = [UIImage imageNamed:@"user"];
-    });
     
-    [HApiClient.instance createMeasurement:m].then(^(HMeasurement *measruement) {
-        NSInteger index = [weakSelf.measurements indexOfObject:m];
-        
-        if (!measruement.user) {
-            measruement.user = unrecognizedUser;
-        }
-        
-        if (index != NSNotFound) {
-            [weakSelf.measurements replaceObjectAtIndex:index withObject:measruement];
-            [weakSelf.tableView reloadData];
-        }
+    [HApiClient.instance createMeasurement:measurement].then(^(HMeasurement *result) {
+        [weakSelf updateMeasurement:measurement with:result];
     });
 }
 

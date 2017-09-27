@@ -11,9 +11,12 @@
 #import "HUserCell.h"
 #import "HApiClient.h"
 #import "MBProgressHUD.h"
+#import "UIViewController+PromiseKit.h"
+#import <objc/runtime.h>
 
 @interface HUsersController ()
 @property (nonatomic) NSArray<HUser *> *users;
+@property (nonatomic, readonly) BOOL isModal;
 @end
 
 @implementation HUsersController
@@ -21,6 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self fetchUsers];
+    
+    if (self.isModal) {
+        self.navigationItem.rightBarButtonItems = nil;
+    } else {
+        self.navigationItem.leftBarButtonItems = nil;
+    }
     
     [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(userDataChangedNotification:) name:HUserDataChangedNotification object:nil];
 }
@@ -53,12 +62,15 @@
     });
 }
 
+- (BOOL)isModal {
+    return self.tabBarController == nil;
+}
+
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
-
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.users.count;
@@ -77,7 +89,19 @@
 #pragma mark <UICollectionViewDelegate>
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"UserFormSegue" sender:self];
+    if (self.isModal) {
+        [self fulfill:self.users[indexPath.item]];
+    } else {
+        [self performSegueWithIdentifier:@"UserFormSegue" sender:self];
+    }
+}
+
+#pragma mark Actions
+
+- (IBAction)cancelBtnAction:(id)sender {
+    if (self.isModal) {
+        [self reject:nil];
+    }
 }
 
 @end

@@ -22,6 +22,7 @@
 
 - (PMKPromise *)getMeasurements;
 - (PMKPromise *)createMeasurement:(HMeasurement *)measurement;
+- (PMKPromise *)updateMeasurement:(HMeasurement *)measurement;
 
 @end
 
