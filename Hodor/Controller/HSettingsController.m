@@ -6,6 +6,7 @@
 //  Copyright © 2017 Antrov. All rights reserved.
 //
 
+#import "HSettings.h"
 #import "HSettingsController.h"
 
 @interface HSettingsController () <UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
@@ -15,6 +16,7 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *hoursPicker;
 @property (strong, nonatomic) IBOutlet UIToolbar *hoursToolbar;
 @property (nonatomic) NSMutableArray<NSString *> *hours;
+@property (nonatomic) HSettings *settings;
 @end
 
 @implementation HSettingsController
@@ -24,11 +26,52 @@
     
     self.hoursTextField.inputAccessoryView = self.hoursToolbar;
     self.hoursTextField.inputView = self.hoursPicker;
-    self.hours = [NSMutableArray new];
+    self.hours = [@[@"None"] mutableCopy];
     
     for (int i = 0; i < 24; i++) {
         [self.hours addObject:[NSString stringWithFormat:@"%d:00", i]];
     }
+    
+    [self loadSettings];
+    
+    [self.autoTurnOffSwitch setOn:self.settings.screenTurnOff];
+    [self.darnkessDetectionSwitch setOn:self.settings.darknessDetection];
+    [self.hoursPicker selectRow:self.settings.hoursIndexFrom inComponent:0 animated:NO];
+    [self.hoursPicker selectRow:self.settings.hoursIndexTo inComponent:1 animated:NO];
+    [self updateHours];
+}
+
+- (void)loadSettings {
+    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *path = [documents stringByAppendingPathComponent:@"settings.json"];
+    
+    if ([NSFileManager.defaultManager fileExistsAtPath:path]) {
+        NSData *data = [NSData dataWithContentsOfFile:path];
+        self.settings = [[HSettings alloc] initWithData:data error:nil];
+    } else {
+        self.settings = [HSettings new];
+    }
+}
+
+- (void)saveSettings {
+    NSString *documents = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    NSString *path = [documents stringByAppendingPathComponent:@"settings.json"];
+    NSData *data = [self.settings toJSONData];
+    
+    [data writeToFile:path atomically:NO];
+}
+
+- (void)updateHours {
+    NSInteger fromIndex = self.settings.hoursIndexFrom;
+    NSInteger toIndex = self.settings.hoursIndexTo;
+    
+    if (fromIndex == 0 || toIndex == 0) {
+        self.hoursTextField.text = @"None";
+        return;
+    }
+    
+    self.hoursTextField.textColor = fromIndex >= toIndex ? UIColor.redColor : UIColor.blueColor;
+    self.hoursTextField.text = [NSString stringWithFormat:@"%@ - %@", self.hours[fromIndex], self.hours[toIndex]];
 }
 
 #pragma mark <UITableViewDelegate>
@@ -62,11 +105,11 @@
 #pragma mark <UIPickerViewDelegate>
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSInteger fromIndex = [pickerView selectedRowInComponent:0];
-    NSInteger toIndex = [pickerView selectedRowInComponent:1];
+    self.settings.hoursIndexFrom = [pickerView selectedRowInComponent:0];
+    self.settings.hoursIndexTo = [pickerView selectedRowInComponent:1];
     
-    self.hoursTextField.textColor = fromIndex >= toIndex ? UIColor.redColor : UIColor.blueColor;
-    self.hoursTextField.text = [NSString stringWithFormat:@"%@ - %@", self.hours[fromIndex], self.hours[toIndex]];
+    [self updateHours];
+    [self saveSettings];
 }
 
 #pragma mark Actions
@@ -78,6 +121,20 @@
 - (IBAction)clearBtnAction:(id)sender {
     self.hoursTextField.text = @"None";
     [self.hoursTextField resignFirstResponder];
+    
+    self.settings.hoursIndexFrom = 0;
+    self.settings.hoursIndexTo = 0;
+    [self saveSettings];
+}
+
+- (IBAction)autoTurnOffSwitchAction:(id)sender {
+    self.settings.screenTurnOff = self.autoTurnOffSwitch.isOn;
+    [self saveSettings];
+}
+
+- (IBAction)darknessDetectionSwitchAction:(id)sender {
+    self.settings.darknessDetection = self.darnkessDetectionSwitch.isOn;
+    [self saveSettings];
 }
 
 @end
