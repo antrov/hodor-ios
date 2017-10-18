@@ -11,8 +11,11 @@
 #import "HMeasurementCell.h"
 #import "HMeasurementsController.h"
 #import "HUsersController.h"
+#import "HSensorService.h"
 #import "MBProgressHUD.h"
 #import "UIViewController+PromiseKit.h"
+
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface HMeasurementsController ()
 @property (nonatomic) NSMutableArray<HMeasurement *> *measurements;
@@ -23,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    [[HSensorService instance] start];
     self.formatter = [NSDateFormatter new];
     self.formatter.dateStyle = NSISO8601DateFormatWithDay;
     
@@ -38,8 +41,28 @@
         [MBProgressHUD hideHUDForView:self.view animated:YES];
     });
     
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"+" style:UIBarButtonItemStylePlain target:self action:@selector(testAddAction:)];
-    self.navigationItem.rightBarButtonItem = item;
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(sensorServiceRecordDidStart:) name:HSensorServiceRecordDidStartNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(sensorServiceRecordDidStop:) name:HSensorServiceRecordDidStopNotification object:nil];
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(sensorServiceMeasurementDidApear:) name:HSensorServiceMeasurementDidApearNotification object:nil];
+}
+
+#pragma mark - Notifications
+
+- (void)sensorServiceRecordDidStart:(NSNotification *)notification {
+    self.navigationController.tabBarItem.badgeValue = @"●";
+}
+
+- (void)sensorServiceRecordDidStop:(NSNotification *)notification {
+    self.navigationController.tabBarItem.badgeValue = nil;
+}
+
+- (void)sensorServiceMeasurementDidApear:(NSNotification *)notification {
+    NSURL *fileURL = [NSURL URLWithString:@"/System/Library/Audio/UISounds/Tock.caf"];
+    SystemSoundID soundID;
+    AudioServicesCreateSystemSoundID((__bridge_retained CFURLRef)fileURL,&soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+    [self testAddAction:self];
 }
 
 - (void)presentUserSelectorForMeasurement:(HMeasurement *)measurement {

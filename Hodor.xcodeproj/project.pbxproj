@@ -11,6 +11,7 @@
 		AF423BC11F7C3E2400860BFB /* HSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF423BC01F7C3E2400860BFB /* HSettingsController.m */; };
 		AF450C1C1F783C970080E0C4 /* HUserFormController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF450C1B1F783C970080E0C4 /* HUserFormController.m */; };
 		AF4572E51F817D0400B8E020 /* HSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4572E41F817D0400B8E020 /* HSettings.m */; };
+		AF4F08901F968EFE009334D5 /* HSensorService.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4F088F1F968EFE009334D5 /* HSensorService.m */; };
 		AF73D8CE1F76C69B00903AF6 /* HMeasurementCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8CD1F76C69B00903AF6 /* HMeasurementCell.m */; };
 		AF73D8D11F76C70700903AF6 /* HUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D01F76C70700903AF6 /* HUserCell.m */; };
 		AF73D8D41F76C91100903AF6 /* HMeasurementsController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF73D8D31F76C91100903AF6 /* HMeasurementsController.m */; };
@@ -46,6 +47,8 @@
 		AF450C1B1F783C970080E0C4 /* HUserFormController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUserFormController.m; sourceTree = "<group>"; };
 		AF4572E31F817D0400B8E020 /* HSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSettings.h; sourceTree = "<group>"; };
 		AF4572E41F817D0400B8E020 /* HSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSettings.m; sourceTree = "<group>"; };
+		AF4F088E1F968EFE009334D5 /* HSensorService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSensorService.h; sourceTree = "<group>"; };
+		AF4F088F1F968EFE009334D5 /* HSensorService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSensorService.m; sourceTree = "<group>"; };
 		AF73D8CC1F76C69B00903AF6 /* HMeasurementCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HMeasurementCell.h; sourceTree = "<group>"; };
 		AF73D8CD1F76C69B00903AF6 /* HMeasurementCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HMeasurementCell.m; sourceTree = "<group>"; };
 		AF73D8CF1F76C70700903AF6 /* HUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUserCell.h; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 			children = (
 				AF73D8DE1F76D23E00903AF6 /* HApiClient.h */,
 				AF73D8DF1F76D23E00903AF6 /* HApiClient.m */,
+				AF4F088E1F968EFE009334D5 /* HSensorService.h */,
+				AF4F088F1F968EFE009334D5 /* HSensorService.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 				AF73D8DA1F76D0FA00903AF6 /* HUser.m in Sources */,
 				AF73D8DD1F76D18600903AF6 /* HMeasurement.m in Sources */,
 				AF423BC11F7C3E2400860BFB /* HSettingsController.m in Sources */,
+				AF4F08901F968EFE009334D5 /* HSensorService.m in Sources */,
 				AF450C1C1F783C970080E0C4 /* HUserFormController.m in Sources */,
 				AF73D8D71F76CBFA00903AF6 /* HUsersController.m in Sources */,
 				AF73D8CE1F76C69B00903AF6 /* HMeasurementCell.m in Sources */,

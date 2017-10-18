@@ -9,7 +9,7 @@
 #import "HApiClient.h"
 #import <AFNetworking.h>
 
-static NSString * const apiBaseUrl = @"http://192.168.0.106:3000/";
+static NSString * const apiBaseUrl = @"http://192.168.0.101:3000/";
 
 NSString * const HUserDataChangedNotification = @"com.antrov.hodor.userdata.changed";
 
